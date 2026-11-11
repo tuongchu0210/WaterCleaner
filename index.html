@@ -497,16 +497,15 @@
         <p class="text-slate-400 font-medium">OPC 2026 - Clearwater</p>
     </footer>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         // Init AOS (Hiệu ứng cuộn)
         AOS.init({ once: true, offset: 100, easing: 'ease-out-cubic' });
 
         /* =========================================
-           THAY THẾ LINK GOOGLE APPS SCRIPT Ở ĐÂY 
+           LINK GOOGLE APPS SCRIPT ĐÃ ĐƯỢC ĐIỀN ĐẦY ĐỦ
            ========================================= */
-        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxa4jLIVXVhP_Me1fsuSqG6L7EuBInh50-M7IU2sXdz2Aua4Z7b6LWxTS1wE9ZZVnTk/exec';
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxa4jLIVXVHp_Me1fsuSqG6L7EuBInh50-M7IU2sXdz2Aua4Z7b6LWxT1wE9ZZVnTk/exec';
 
         // Xử lý gửi Form Đặt Hàng
         const form = document.getElementById('orderForm');
@@ -542,7 +541,7 @@
             })
             .catch(error => {
                 console.error("Chi tiết lỗi:", error);
-                alert('❌ Gửi thông tin thất bại. Vui lòng nhấn F12 mở tab Console để xem chi tiết.');
+                alert('❌ Gửi thông tin thất bại. Vui lòng kiểm tra lại kết nối mạng.');
             })
             .finally(() => {
                 btnText.innerText = 'Xác Nhận Đặt Hàng';
@@ -551,6 +550,7 @@
                 submitBtn.disabled = false;
             });
         });
+    </script>
 
         /* =========================================
            KỊCH BẢN MÔ HÌNH 3D (THREE.JS)
